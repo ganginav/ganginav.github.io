@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>froggy</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
- <body>
+
+<head>
+  <title>GPA Calculator</title>
   <script src="script.js"></script>
+</head>
 
-  <h1>frog</h1>
-  <p>frog frog</p>
-  <div id="heeleys">
-    <div id ="picture"><img src="frog.jpg" width="200px"></div>
-    <div id="description"><p>what the frog doin'</p></div>
-    
+<body>
+  <header>
+    <h1>AHS GPA Calculator</h1>
+  </header>
+  <form>
+    <label>Number of grades:</label>
+    <input type="number" id="numGrades" oninput="addGrades()">
+    <div id="gradecontainer"></div>
+    <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+  </form>
+  <div id="gpa"></div>
+  <script>
+    function addGrades() {
+      var numGrades = document.getElementById("numGrades").value;
+      var gradeContainer = document.getElementById("gradecontainer");
+      gradeContainer.innerHTML = "";
+      for (var i = 0; i < numGrades; i++) {
+        gradeContainer.innerHTML += `
+            <div>
+              <label>Grade ${i + 1}:</label>
+              <input type="text" name="grade">
+              <label>Type of class:</label>
+              <select name="classType">
+                <option value="AP">AP</option>
+                <option value="H">H</option>
+                <option value="CP">CP</option>
+              </select>
+            </div>
+          `;
+      }
+    }
+  </script>
+</body>
 
-  <div id="reviews">
-    <div id="review">
-      <h1 id="header">Reviews:</h1>
-      <h3 id="name">Dee from Dee's Nuts</h3>
-      <p id="content">i just love how the frog know whats up the frog is doin the doin yknow?</p>
-   <div id="review">
-      <h3 id="name">Mike</h3>
-      <p id="content">the frog is so great and handsome and awesome</p>
-   <div id="review">
-      <h3 id="name">Yoo</h3>
-      <p id="content">i hate the frog its so overprice :skull:</p>
- </body>
 </html>
