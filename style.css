@@ -1,17 +1,4 @@
 html, body {
-  background-color: green;
-  color: burlywood;
-  padding: 10px;
-}
-
-#picture{
-  float: left;
-}
-
-#description{
-  float: right;
-}
-
-#reviews{
-  clear: both;
+  height: 100%;
+  width: 100%;
 }
