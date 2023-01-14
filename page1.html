@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GPA Calculator</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<div class="container">
+<body>
+  <header>
+    <h1 style="font-family:verdana">AHS GPA Calculator</h1>
+  </header>
+  <form>
+    <label style="font-family:verdana">Number of grades:</label>
+    <input type="number" id="numGrades" oninput="addGrades()"><br><br>
+    <div id="gradecontainer"></div>
+    <br>
+    <button style="font-family:verdana" class="calculate-gpa-btn" type="button" onclick="calculateGPA()">Calculate GPA</button>
+  </form>
+  <br>
+  <div id="gpa"></div>
+  <script>
+    function addGrades() {
+      var numGrades = document.getElementById("numGrades").value;
+      var gradeContainer = document.getElementById("gradecontainer");
+      gradeContainer.innerHTML = "";
+      for (var i = 0; i < numGrades; i++) {
+        gradeContainer.innerHTML += `
+            <div class="gradecontainer">
+              <label style="font-family:verdana">Grade ${i + 1}:</label>
+              <input style="font-family:verdana" type="text" name="grade">
+              <label style="font-family:verdana">Type of class:</label>
+              <select name="classType">
+                <option value="H">Honors</option>
+                <option value="AP">AP</option>
+                <option value="CP">CP</option>
+              </select>
+            </div>
+          `;
+      }
+    }
+  </script>
+  <br>
+  <a href="index.html" style="font-family:verdana" id="expanding-box">Back to Home</a>
+</body>
+</div>
+</html>
