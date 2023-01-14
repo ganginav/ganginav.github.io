@@ -170,3 +170,7 @@ function calculateGPA() {
     document.getElementById("gpa").innerHTML = "GPA: " + gpa.toFixed(2);
   }
 }
+
+function liveViews(response) {
+    document.getElementById('visits').innerText = response.value;
+}
