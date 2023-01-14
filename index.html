@@ -14,11 +14,11 @@
     <h1 style="font-family:verdana">AHS GPA Calculator</h1>
   </header>
   <form>
-    <label>Number of grades:</label>
+    <label style="font-family:verdana">Number of grades:</label>
     <input type="number" id="numGrades" oninput="addGrades()"><br><br>
     <div id="gradecontainer"></div>
     <br>
-    <button class="calculate-gpa-btn" type="button" onclick="calculateGPA()">Calculate GPA</button>
+    <button style="font-family:verdana" class="calculate-gpa-btn" type="button" onclick="calculateGPA()">Calculate GPA</button>
   </form>
   <br>
   <div id="gpa"></div>
@@ -30,9 +30,9 @@
       for (var i = 0; i < numGrades; i++) {
         gradeContainer.innerHTML += `
             <div class="gradecontainer">
-              <label>Grade ${i + 1}:</label>
+              <label style="font-family:verdana">Grade ${i + 1}:</label>
               <input type="text" name="grade">
-              <label>Type of class:</label>
+              <label style="font-family:verdana">Type of class:</label>
               <select name="classType">
                 <option value="H">Honors</option>
                 <option value="AP">AP</option>
@@ -43,7 +43,7 @@
       }
     }
   </script>
-  <p>This page has been viewed <span id="visits"></span> times. </p>
+  <p style="font-family:verdana">This page has been viewed <span id="visits"></span> times. </p>
 </body>
 </div>
 </html>
