@@ -5,20 +5,19 @@
   <title>GPA Calculator</title>
   <script src="script.js"></script>
   <script src="https://api.countapi.xyz/hit/ganginav.github.io/visits?callback=liveViews" async></script>
-
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1>AHS GPA Calculator</h1>
+    <h1 style="font-family:verdana">AHS GPA Calculator</h1>
   </header>
   <form>
     <label>Number of grades:</label>
     <input type="number" id="numGrades" oninput="addGrades()"><br><br>
     <div id="gradecontainer"></div>
-    
-    <button type="button" onclick="calculateGPA()">Calculate GPA</button>
-
+    <br>
+    <button class="calculate-gpa-btn" type="button" onclick="calculateGPA()">Calculate GPA</button>
   </form>
   <br>
   <div id="gpa"></div>
@@ -29,7 +28,7 @@
       gradeContainer.innerHTML = "";
       for (var i = 0; i < numGrades; i++) {
         gradeContainer.innerHTML += `
-            <div>
+            <div class="gradecontainer">
               <label>Grade ${i + 1}:</label>
               <input type="text" name="grade">
               <label>Type of class:</label>
