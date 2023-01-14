@@ -4,6 +4,8 @@
 <head>
   <title>GPA Calculator</title>
   <script src="script.js"></script>
+  <script src="https://api.countapi.xyz/hit/etoekogherthrthyu.vibhugangina1.repl.co/visits?callback=liveViews" async></script>
+
 </head>
 
 <body>
@@ -12,10 +14,13 @@
   </header>
   <form>
     <label>Number of grades:</label>
-    <input type="number" id="numGrades" oninput="addGrades()">
+    <input type="number" id="numGrades" oninput="addGrades()" max="10"><br><br>
     <div id="gradecontainer"></div>
+    
     <button type="button" onclick="calculateGPA()">Calculate GPA</button>
+
   </form>
+  <br>
   <div id="gpa"></div>
   <script>
     function addGrades() {
@@ -38,6 +43,7 @@
       }
     }
   </script>
+  <p>This page has been viewed <span id="visits"></span> times. </p>
 </body>
 
 </html>
