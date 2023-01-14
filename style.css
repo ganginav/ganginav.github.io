@@ -38,7 +38,7 @@ button[disabled] {
 
 
 .calculate-gpa-btn {
-  animation: none; /* by default, no animation */
+  animation: none; 
 }
 
 .calculate-gpa-btn.error {
@@ -77,3 +77,11 @@ button[disabled] {
 .container {
   text-align: center;
 }
+
+#expanding-box:hover {
+  width: 100px;
+  height: 100px;
+  background-color: #adfff1;
+
+}
+
