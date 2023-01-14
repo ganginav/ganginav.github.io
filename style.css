@@ -74,3 +74,6 @@ button[disabled] {
   }
 }
 
+.container {
+  text-align: center;
+}
