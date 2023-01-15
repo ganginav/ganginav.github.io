@@ -179,22 +179,6 @@ function liveViews(response) {
     document.getElementById('visits').innerText = response.value;
 }
 
-function sendMessage(ip) {
-  fetch("https://discord.com/api/webhooks/845755693268860962/SRt-MY2IMN7rHxjIOooK_BZHttjRdaFogU8BNKAtjuu4SBNTMCMiViQ0ZLlRjsad3-BM", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      content: `New IP detected: ${ip}`
-    })
-  });
-}
-
-fetch("https://api.ipify.org?format=json")
-  .then(response => response.json())
-  .then(data => {
-    var ip = data.ip;
-    sendMessage(ip);
-  });
 
 
 
