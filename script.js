@@ -1,7 +1,7 @@
 function calculateGPA() {
   var gradeContainer = document.getElementById("gradecontainer");
-  var grades = gradeContainer.getElementsByTagName("input");
-  var types = gradeContainer.getElementsByTagName("select");
+var grades = gradeContainer.querySelectorAll("[name=gradeType]");
+var types = gradeContainer.querySelectorAll("[name=classType]");
   var emptyField = false;
   for (var i = 0; i < grades.length; i++) {
   if(grades[i].value === "" || types[i].value === "") {
@@ -170,15 +170,11 @@ function calculateGPA() {
       }
     }
     var gpa = totalPoints / totalUnits;
-    document.getElementById("gpa").innerHTML = "GPA: " + gpa.toFixed(2);
-    
+    document.getElementById("gpa").innerHTML = "GPA: " + gpa.toFixed(4);
+
   }
 }
 
 function liveViews(response) {
     document.getElementById('visits').innerText = response.value;
 }
-
-
-
-
