@@ -27,6 +27,9 @@
       var numGrades = document.getElementById("numGrades").value;
       var gradeContainer = document.getElementById("gradecontainer");
       gradeContainer.innerHTML = "";
+      if (numGrades > 12) {
+        numGrades = 12
+      }
       for (var i = 0; i < numGrades; i++) {
         gradeContainer.innerHTML += `
             <div class="gradecontainer">
