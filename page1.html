@@ -31,7 +31,21 @@
         gradeContainer.innerHTML += `
             <div class="gradecontainer">
               <label style="font-family:verdana">Grade ${i + 1}:</label>
-              <input style="font-family:verdana" type="text" name="grade">
+                <select name="gradeType">
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="D-">D-</option>
+                <option value="F">F</option>
+              </select>
               <label style="font-family:verdana">Type of class:</label>
               <select name="classType">
                 <option value="H">Honors</option>
