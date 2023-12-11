@@ -175,6 +175,3 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
   }
 }
 
-function liveViews(response) {
-    document.getElementById('visits').innerText = response.value;
-}
