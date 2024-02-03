@@ -207,7 +207,7 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
     }
     var gpa = totalPoints / totalUnits;
     document.getElementById("gpa").innerHTML = "GPA: " + gpa.toFixed(4);
-    document.getElementById("cum").innerHTML = "Total Points: " + totalPoints;
+    document.getElementById("cum").innerHTML = "Total Points: " + totalPoints.toFixed(1);
     document.getElementById("credits").innerHTML = "Total Credits: " + totalUnits;
     
   }
