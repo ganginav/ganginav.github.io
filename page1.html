@@ -22,6 +22,8 @@
   </form>
   <br>
   <div id="gpa"></div>
+  <div id="cum"></div>
+  <div id="credits"></div>
   <script>
     function addGrades() {
       var numGrades = document.getElementById("numGrades").value;
@@ -51,8 +53,9 @@
               </select>
               <label style="font-family:verdana">Type of class:</label>
               <select name="classType">
-                <option value="H">Honors</option>
-                <option value="AP">AP</option>
+              <option value="H">Honors</option>
+              <option value="AP15">AP/ECE (1.5)</option>
+              <option value="AP">AP/ECE (1)</option>
                 <option value="CP">CP</option>
               </select>
             </div>
