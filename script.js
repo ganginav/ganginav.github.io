@@ -24,6 +24,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 5.33;
           totalUnits += 1;
+        } else if(type === "AP15") {
+          totalPoints += 5.33*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 5.00;
           totalUnits += 1;
@@ -36,6 +39,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 5.00;
           totalUnits += 1;
+        } else if(type === "AP15") {
+          totalPoints += 5.00*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 4.67;
           totalUnits += 1;
@@ -48,7 +54,10 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 4.67;
           totalUnits += 1;
-        } else if(type === "H") {
+        } else if(type === "AP15") {
+          totalPoints += 4.67*1.5;
+          totalUnits += 1.5;
+        }else if(type === "H") {
           totalPoints += 4.34;
           totalUnits += 1;
         } else if(type === "CP") {
@@ -60,7 +69,10 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 4.33;
           totalUnits += 1;
-        } else if(type === "H") {
+        } else if(type === "AP15") {
+          totalPoints += 4.33*1.5;
+          totalUnits += 1.5;
+        }else if(type === "H") {
           totalPoints += 4.00;
           totalUnits += 1;
         } else if(type === "CP") {
@@ -72,6 +84,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 4.00;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 4.00*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 3.67;
           totalUnits += 1;
@@ -84,6 +99,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 3.67;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 3.67*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 3.34;
           totalUnits += 1;
@@ -96,6 +114,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 3.33;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 3.33*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 3.00;
           totalUnits += 1;
@@ -108,6 +129,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 3.00;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 3.00*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 2.67;
           totalUnits += 1;
@@ -120,6 +144,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 2.67;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 2.67*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 2.00;
           totalUnits += 1;
@@ -132,6 +159,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 2.34;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 2.34*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 2.00;
           totalUnits += 1;
@@ -144,7 +174,10 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 2.00;
           totalUnits += 1;
-        } else if(type === "H") {
+        } else if(type === "AP15") {
+          totalPoints += 2.00*1.5;
+          totalUnits += 1.5;
+        }else if(type === "H") {
           totalPoints += 1.67;
           totalUnits += 1;
         } else if(type === "CP") {
@@ -156,6 +189,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
         if(type === "AP") {
           totalPoints += 1.67;
           totalUnits += 1;
+        }else if(type === "AP15") {
+          totalPoints += 1.67*1.5;
+          totalUnits += 1.5;
         } else if(type === "H") {
           totalPoints += 1.34;
           totalUnits += 1;
@@ -171,7 +207,9 @@ var types = gradeContainer.querySelectorAll("[name=classType]");
     }
     var gpa = totalPoints / totalUnits;
     document.getElementById("gpa").innerHTML = "GPA: " + gpa.toFixed(4);
-
+    document.getElementById("cum").innerHTML = "Total Points: " + totalPoints;
+    document.getElementById("credits").innerHTML = "Total Credits: " + totalUnits;
+    
   }
 }
 
